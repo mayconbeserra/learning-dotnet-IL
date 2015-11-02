@@ -22,6 +22,10 @@ bld/
 [Bb]in/
 [Oo]bj/
 
+# DLLs and exe files
+*.exe
+*.dll
+
 # Visual Studo 2015 cache/options directory
 .vs/
 
