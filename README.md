@@ -6,13 +6,15 @@ This is my personal project, which is related to my studies applied to intermedi
 
 Just run in your windows prompt ilasm {ilFileName.il}, after that, it will generate your dll or exe file.
 
-# Reference
-
-https://en.wikipedia.org/wiki/List_of_CIL_instructions
-
 # Code added
 
 + HelloWorld.il
 + BranchToTarget.il
 + BranchToTargetConditional.il (e.g. if/else)
 + BranchToTargetConditionalEquals.il (e.g. if/else)
++ CallingMethodsWithParameters.il
+
+# References
+
+https://en.wikipedia.org/wiki/List_of_CIL_instructions
+http://elemarjr.net/2010/07/29/il-101parte-1/
