@@ -1,11 +1,11 @@
 .assembly extern mscorlib {}
 
-.assembly BranchToTargetConditional
+.assembly BranchToTargetConditionalEquals
 {
 	.ver 1:0:0:0
 }
 
-.module BranchToTargetConditional.exe
+.module BranchToTargetConditionalEquals.exe
 
 .namespace ILStudies
 {
@@ -17,7 +17,7 @@
 			.maxstack 4
 			.entrypoint
 
-      ldstr "Hello, this is a good exemple of using a conditional branch!"
+      ldstr "Hello, this is a good exemple of using a conditional branch if the first one is equals the second one!"
 			call void [mscorlib]System.Console::WriteLine(string)
 
       ldstr "Please, enter your first number."
@@ -30,13 +30,13 @@
       call string [mscorlib]System.Console::ReadLine()
       call int32 [mscorlib]System.Int32::Parse(string)
 
-      ble.s BranchWhenFirstNumberIsSmaller
-        ldstr "First number was larger than second one"
+      beq.s BranchWhenFirstNumberIsEqualsTheSecondOne
+        ldstr "First number isn't equals the second one"
         call void [mscorlib]System.Console::WriteLine(string)
         br.s done
 
-      BranchWhenFirstNumberIsSmaller:
-        ldstr "The first number was less than or equal to the second one"
+      BranchWhenFirstNumberIsEqualsTheSecondOne:
+        ldstr "The first number is equals the second one"
         call void [mscorlib]System.Console::WriteLine(string)
 
       done:
