@@ -1,11 +1,11 @@
 .assembly extern mscorlib {}
 
-.assembly HelloWorld
+.assembly BranchToTarget
 {
 	.ver 1:0:0:0
 }
 
-.module HelloWorld.exe
+.module BranchToTarget.exe
 
 .namespace ILStudies
 {
@@ -17,8 +17,15 @@
 			.maxstack 1
 			.entrypoint
 
-			ldstr "Hello World!"
+      br.s changeTheFlow
+
+			ldstr "First Hello World!"
 			call  void [mscorlib]System.Console::WriteLine(string)
+
+      changeTheFlow:
+
+      ldstr "Hey! The first hello world wasn't called \o/"
+      call  void [mscorlib]System.Console::WriteLine(string)
 
 			ret
 		}
