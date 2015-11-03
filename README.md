@@ -15,7 +15,7 @@ Just run in your windows prompt the command "ilasm {ilFileName.il}", after that,
 + CallingMethodsWithParameters.il
 + LoopUsingIL.il (e.g. for (int i = lower; i <= higher; i++))
 + SumValues.il (using local variable)
-+ EvaluatingAndExpressionUsingCLTAndCEQ (e.g. x >= y)
++ EvaluatingAnExpressionUsingCLTAndCEQ (e.g. x >= y)
 
 # Concepts
 
