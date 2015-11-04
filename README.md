@@ -27,9 +27,15 @@ Instruction that copy values from memory to the evaluation stack are called **Lo
 
 Boxing is the process of converting a value type to the type object or to any interface type implemented by this value type. When the CLR boxes a value type, it wraps the value inside a System.Object and stores it on the managed heap. Unboxing extracts the value type from the object. In the following example, the integer variable i is boxed and assigned to object o.
 
+int i = 123;
+object o = (object)i;  // boxing
+
+o = 123;
+i = (int)o;  // unboxing
+
 **Why should we care about boxing and unboxing?**
 
-In relation to simple assignments, boxing and unboxing are computationally expensive processes. When a value type is boxed, a new object must be allocated and constructed. To a lesser degree, the cast required for unboxing is also expensive computationally. For more information, see Performance.
+In relation to simple assignments, boxing and unboxing are computationally expensive processes. When a value type is boxed, a new object must be allocated and constructed. To a lesser degree, the cast required for unboxing is also expensive computationally.
 
 # References
 
